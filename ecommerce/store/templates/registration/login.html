@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<div class="shadow-wrap centered-container">
+  <div class="form-wrap">
+    <h3>Login</h3>
+    <form method="POST" action="{% url 'store:store' %}">
+      {% csrf_token %} {{form}}
+      <button type="submit">Submit</button>
+    </form>
+    <a class="signup-link" href="{% url 'store:authView' %}">Signup</a>
+  </div>
+</div>
+{% endblock content %}
