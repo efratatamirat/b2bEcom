@@ -55,20 +55,6 @@ def authView(request):
 #the code is till here
 
 
-'''
-def authView(request):
-    if request.method == "POST":
-        form = UserCreationForm(request.POST or None)
-        if form.is_valid():
-            form.save()
-            return redirect("store:login")
-    else:
-        form = UserCreationForm()
-    
-    return render(request, "registration/signup.html", {"form": form})
-'''
-#till here
-
 
 
 def store(request):
@@ -180,45 +166,9 @@ def processOrder(request):
         zipcode=data['shipping']['zipcode'],
         )
 
-    #the code bellow is for printing the datas that are in chekout.html on line 141
-    #print('Data:', request.body)
-    #the code is till here 
-    
     return JsonResponse('Payment submitted..', safe=False)
 
 
-#the code bellow fo when you added the admin side 
-
-#def addProduct(request):
- #   return render(request, 'admin/home.html')
-
-'''
-def addProduct(request):
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save()
-            # Assuming you have a way to determine the current order
-            order = determine_current_order(request)  # You need to implement this function
-            quantity = 1  # Default quantity, adjust as needed
-            
-            # Create and save the OrderItem instance
-            order_item = OrderItem(product=product, order=order, quantity=quantity)
-            order_item.save()
-            
-            return redirect('store:home')
-    else:
-        form = ProductForm()
-
-    #data = cartData(request)
-    products = Product.objects.all()
-    context = {'products': products, 'form': form}
-    return render(request, 'admin/home.html', context)
-'''
-#data = cartData(request)
-#code bellow you took from AI that allows ypu access the quantity in the product 
-#class int e models.py 
-#THE ORIGINAL CODE IS BELLOW
 
 def addProduct(request):
     if request.method == 'POST':
@@ -253,83 +203,6 @@ def product_delete(request, pk):
     return render(request, 'admin/product_delete.html', context)#context
 
 
-'''
-    try:
-        product = Product.objects.get(id=pk)
-    except ObjectDoesNotExist:
-        # Handle the case where the Product does not exist
-        return HttpResponse("Product not found")
-
-    if request.method == 'POST':
-        product.delete()
-        return redirect('store:home')
-'''
-    
-    
-
-
-'''  
-    product = get_object_or_404(Product, id=pk)
-    if request.method == 'POST':
-        product.delete()
-        return redirect('admin/home.html')
-    context = {
-        'product': product
-    }
-'''
-    #return render(request, 'admin/product_delete.html')#context
-
-'''
-from django.shortcuts import get_object_or_404
-
-def addProduct(request):
-    if request.method == 'POST':
-        if 'delete-btn' in request.POST:
-            product_id = request.POST.get('product_id')
-            product = get_object_or_404(Product, id=product_id)
-            product.delete()
-            return redirect('store:home')
-        else:
-            form = ProductForm(request.POST, request.FILES)
-            if form.is_valid():
-                form.save()
-                return redirect('store:home')
-    else:
-        form = ProductForm()
-
-    data = cartData(request)
-    products = Product.objects.all()
-    context = {'products': products, 'form': form}
-    return render(request, 'admin/home.html', context)
-'''
-    
-'''
-def addProduct(request):
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('store:home')
-    else:
-        form = ProductForm()
-    
-    data = cartData(request)
-    cartItems = data['cartItems']
-    products = Product.objects.all()
-    context = {'products': products, 'cartItems': cartItems, 'form': form}
-    return render(request, 'store/store.html', context)
-'''
-'''
-def delete_product(request, product_id):
-    # Retrieve the product instance
-    product = Product.objects.get(id=product_id)
-
-    # Delete the product
-    product.delete()
-
-    # Redirect to a success page or perform any other desired logic
-    return redirect('product_list')
-'''
 
 #the code is till here
 
