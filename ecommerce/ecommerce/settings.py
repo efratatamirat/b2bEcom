@@ -59,7 +59,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'], #you put this in when you mage the login page
+        'DIRS': [BASE_DIR / 'templates'], #you put this in when you made the login page
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,6 +123,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 #the code bellow was added when you were making the store and everything else not the login page
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Ensure your static folder is defined
+]
 '''
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')

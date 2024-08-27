@@ -18,6 +18,7 @@ class ProductForm(forms.ModelForm):
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True)
+    tin = forms.CharField(max_length=200, required=True)  # TIN field in the form
 
     class Meta:
         model = User
@@ -29,7 +30,7 @@ class CustomUserCreationForm(UserCreationForm):
         if commit:
             user.save()
             # Create a Customer object linked to the new User
-            customer = Customer(user=user, name=user.username, email=user.email)
+            customer = Customer(user=user, name=user.username, email=user.email, tin=self.cleaned_data['tin'])
             customer.save()
         return user
 

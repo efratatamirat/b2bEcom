@@ -228,8 +228,11 @@ def data_table(request):
 #the code is till here
 
 
+###############################################################################################################################################################
+#THIS IS THE HOME PAGE OF THE WHOLE COMPANY
 
-
+def company_home_page(request):
+    return render(request, 'company/company_home_page.html')
 
 
 

@@ -1,0 +1,150 @@
+{% extends 'company/company_home_page_main.html' %} {% load static %}
+{% block content %}
+
+<div class="intro-parent">
+    <div class="intro">
+    <h1 class="intro-h1">WHO ARE WE</h1>
+    <p class="intro-p">
+        Welcome to our service page! Here we provide a range of services to meet your needs. 
+        Our team is dedicated to delivering high-quality solutions that are tailored to your requirements.
+        Whether you are looking for web development, consulting, or support, we have the expertise to help you succeed.
+    </p>
+    
+    <a href="#" class="button">Learn More</a> <!-- Button added here -->
+</div>
+</div>
+<!--THIS IS FOR THE SERIVCE SECTION-->
+<div class="wrapper">
+    <h1>Our Services</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Esse amet illo eos eligendi nobis nam aspernatur 
+         placeat.</p>
+         <div class="content-box">
+            <div class="card">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Marketing Services</h2>
+              <p>Marketing services can include advertising, public relations, market research, and more. </p>
+
+            </div>
+            <div class="card">
+                <i class="bx bx-laptop bx-md"></i>
+                <h2>Website Development</h2>
+               <p>Web development refers to the creating, building, and maintaining of websites.</p>
+                     
+            </div>
+            <div class="card">
+                <i class='bx bx-user bx-md'></i>
+
+                <h2>24/7 Call Center Services</h2>
+            <p>A BPO call center is a team of outsourced agents who handle incoming and outgoing.</p>
+                     
+            </div>
+            <div class="card">
+                <i class="bx bx-mail-send bx-md"></i>
+                <h2>Social Media Marketing</h2>
+                <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                    numquam delectus!</p>
+                     
+            </div>
+            <div class="card">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Copporate Bussiness</h2>
+                <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                    numquam delectus!</p>
+                     
+            </div>
+            <div class="card">
+                <i class="bx bx-paint bx-md"></i>
+                <h2>Creative Consultancy</h2>
+                <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                    numquam delectus!</p>
+                     
+            </div>
+         </div>
+</div>
+
+
+
+
+<!--THIS CODE BELOW IS FOR THE IMAGE AND THE WRITING SIDE BY SIDE-->
+<div class="container">
+    <img src="{% static 'images/pexels-whynugrohou-20562589.jpg' %}"  alt="Placeholder Image" class="image">
+    <div class="text">
+        <h2>Title of the Writing</h2>
+        <p>
+            This is a description that accompanies the image. 
+            Here you can write details or information relevant to the image shown on the left.
+            Make sure to provide engaging content that adds value.
+        </p>
+    </div>
+</div>
+
+<!--########################################################################################################-->
+<div class="rev-section">
+
+    <h2 class="title">Our Guests Love Us</h2>
+    
+    <div class="reviews">
+    
+    <div class="review">
+       <div class="head-review">
+          <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
+       </div>
+       <div class="body-review">
+          <div class="name-review">Nathan D.</div>
+          <div class="place-review">Germany</div>
+          <div class="rating">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star-half"></i>
+          </div>
+          <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+       </div>
+    </div>
+    <div class="review">
+       <div class="head-review">
+          <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
+       </div>
+       <div class="body-review">
+          <div class="name-review">Mary Will</div>
+          <div class="place-review">Paris</div>
+          <div class="rating">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+          </div>
+          <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+       </div>
+    </div>
+    <div class="review">
+       <div class="head-review">
+          <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
+       </div>
+       <div class="body-review">
+          <div class="name-review">Kevin Tuck</div>
+          <div class="place-review">New York</div>
+          <div class="rating">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star-half"></i>
+          </div>
+          <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+       </div>
+    </div>
+    
+    </div>
+    
+    </div>
+
+
+<!--THE CODE BELOW IS FOR THE MODAL WHEN THE "SIGNUP/LOGIN"-->
+
+
+
+{% endblock content %}

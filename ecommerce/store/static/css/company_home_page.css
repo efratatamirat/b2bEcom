@@ -1,0 +1,457 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background-color 0.3s;
+}
+.navbar a:hover {
+    background-color: #575757;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu a {
+    text-align: center;
+}
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    cursor: pointer;
+}
+.toggle-button div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .toggle-button {
+        display: flex;
+    }
+}
+
+/* THE CODE BELOW IS FOR THE NAVBAR SIGNUP/LOGIN BUTTON */
+.signup-login-button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007BFF; /* Button color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+/*######################################################################################################*/
+/* THIS CODE BELOW IS FOR THE "the first thing after the navbar" */
+
+
+.intro-parent{
+    background-image: url("{%static 'images/pexels-suzyhazelwood-3775379.jpg'%}");
+    margin-top: 5em;
+    margin-left: 20em;
+    margin-right: 20em;
+}
+.intro{
+    text-align: center;
+    
+}
+.intro-h1{
+    color: #333;
+}
+.intro-p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007BFF; /* Button color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+
+ /* THIS IS FOR THE SERIVCE SECTION */
+ /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2*/
+ .wrapper{
+    font-family: 'poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+    margin-top: 5em;
+}
+.wrapper h1{
+    font-size: 3em;
+
+    margin: 25px;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+.card i{
+    margin: 20px;
+    color: #581ed6;
+}
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p{
+    color: #6c757d;
+    text-align: center;
+}
+.card:hover i,
+.card:hover p{
+    color: #fff;
+}
+.card:hover h2{
+    font-weight: 600;
+}
+.card:nth-child(1):hover{
+    background: linear-gradient(45deg,
+    rgba(88, 70, 159, 0.7) 0% ,
+    rgba(136, 113, 199, 0.7)100% ) ,
+     url('bg.jpg');
+     background-size: cover;
+}
+.card:nth-child(2):hover{
+    background: linear-gradient(45deg,
+                                   rgba(88, 70, 159, 0.7) 0% ,
+                                   rgba(136, 113, 199, 0.7)100% ) ,
+                                    url('bg2.jpg');
+                                    background-size: cover;
+}
+.card:nth-child(3):hover{
+    background: linear-gradient(45deg,
+                                   rgba(88, 70, 159, 0.7) 0% ,
+                                   rgba(136, 113, 199, 0.7)100% ) ,
+                                    url('bg3.jpg');
+                                    background-size: cover;
+}
+.card:nth-child(4):hover{
+    background: linear-gradient(45deg,
+                                   rgba(88, 70, 159, 0.7) 0% ,
+                                   rgba(136, 113, 199, 0.7)100% ) ,
+                                    url('bg4.jpg');
+                                    background-size: cover;
+}
+.card:nth-child(5):hover{
+    background: linear-gradient(45deg,
+                                   rgba(88, 70, 159, 0.7) 0% ,
+                                   rgba(136, 113, 199, 0.7)100% ) ,
+                                    url('bg5.jpg');
+                                    background-size: cover;
+}
+.card:nth-child(6):hover{
+    background: linear-gradient(45deg,
+                                   rgba(88, 70, 159, 0.7) 0% ,
+                                   rgba(136, 113, 199, 0.7)100% ) ,
+                                    url('bg2.jpg');
+                                    background-size: cover;
+}
+@media(max-width:991px){
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
+}
+
+
+/*#######################################################################################################################################*/
+/* THIS CODE BELOW IS FOR THE IMAGE AND THE WRITING SIDE BY SIDE */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+.image {
+    flex: 1; /* Allow image to grow */
+    max-width: 50%;  /* Set max width for responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 0%;
+}
+.text {
+    flex: 2; /* Allow text to grow more */
+}
+h2 {
+    color: #333;
+}
+p {
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+    .image {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em; /* Adjust title size on smaller screens */
+    }
+    p {
+        font-size: 0.9em; /* Adjust paragraph size */
+    }
+}
+
+/*###############################################################################3*/
+/* THE CODE BELLOW IF FOR THE FOURTH FROM THE NAVBAR */
+
+.rev-section{
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 1100px;
+    text-align: center;
+  }
+  
+  .title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgb(50, 50, 50);
+    margin-bottom: .5rem;
+    margin-top: 3em;
+  }
+  .note{
+    font-size: 1.1rem;
+    color: rgb(150, 150, 150);
+    font-style: italic;
+      color: red;
+    font
+  
+  }
+  
+  .reviews{
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .review{
+    margin: 0 1rem;
+    min-width: 300px;
+    flex: 1;
+  }
+  
+  .head-review{
+    margin: 1.75rem auto;
+    width: 150px;
+    height: 150px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+  }
+  
+  .body-review{
+    background-color: rgb(238, 238, 238);
+    padding: 2.5rem;
+    box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
+  }
+  .name-review{
+    font-size: 1.5rem;
+    color: rgb(50, 50, 50);
+    margin-bottom: .25rem;
+  }
+  .place-review{
+    color: red;
+    font-style: italic;
+  }
+  .rating{
+    color: rgb(253, 180, 42);
+    margin: 1rem 0;
+  }
+  .desc-review{
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    color: rgb(150, 150, 150);
+  }
+  
+  @media (max-width: 678px){
+    .review{
+      margin-top: 1.5rem;
+    }
+  }
+
+ 
+/*#######################################################################################################################################*/
+/* THIS FOR THE FOOTER */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+.container-footer{
+    background-color: black;
+    margin-top: 5em;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+}
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col h4{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 22px;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-col h4::before{
+    content: '';
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    background-color: #e91e64;
+    bottom: -10px;
+}
+
+.footer-col ul li{
+    padding: 10px 0;
+}
+.footer-col ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footer-col ul li a:hover{
+    opacity: 1;
+}
+.footer-col input{
+    border: none;
+    width: 250px;
+    height: 45px;
+    display: block;
+    padding-left: 20px;
+    margin: 14px 0;
+}
+
+.footer-col .inputSubmit{
+    padding: 0px 20px;
+    background-color: #e91e64;
+    border: none;
+    color: white;
+}
+.col p{
+    color: white;
+}
+.row hr{
+    opacity: 0.7;
+}
+
+.row .socialIcons i{
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: 0.5s;
+}
+
+.row .socialIcons i:hover{
+    color: #e91e64;
+}
+
+@media (max-width: 600px){
+    footer .row{
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+
+    footer .footer-col ul{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-col input{
+        width: 100%;
+    }
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* THE CODE BELOW IS FOR THE MODAL WHEN THE "SIGNUP/LOGIN" */
+

@@ -37,6 +37,11 @@ urlpatterns = [
 
      #the code is till here
 
+     ############################################################################################################################################################3
+     #THIS IS THE HOME PAGE OF THE WHOLE COMPANY
+
+     path('company_home_page/', views.company_home_page, name='company_home_page'),
+
 
 
 
@@ -44,4 +49,53 @@ urlpatterns = [
 ]
 
  
+
+
+#first superuser
+#lauda
+#efratatamirat@gmail.com
+#password:  
+'''
+THIS IS YOUR MAIN SUPERUSER
+
+the one after forgeting the above password
+niki
+efratatamirat@gmail.com
+passniki£$%
+'''
+
+#this is the second user for an example
+#username
+#userpass123
+
+#lookbelmar
+#
+#poss)3984h
+
+#bomer
+#nommer@gmail.com
+#voodooshit@£123
+
+'''
+superuser:maashi
+email:mashit@gmail.com
+password:mahti:2341@
+'''
+
+#milki
+#milki3@gmail.com
+#milipassqword@
+
+'''
+malli
+maloshoud@gmail.com
+mollidoss@345$
+'''
+'''
+when i logout in the admin page the default one and login with the super user 
+i created in the application i am building it gets in but it considered as a guest user
+but wehn i let it and then login in the admin page it gets in but ehrn i get back to my application ad refresh
+it gives an erorr that says user has no customer.
+but all of this go away when i login with the super user that i made early in the begining of making the application
+'''
 
