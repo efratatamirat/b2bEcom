@@ -124,7 +124,7 @@ STATIC_URL = 'static/'
 #the code bellow was added when you were making the store and everything else not the login page
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Ensure your static folder is defined
+    BASE_DIR / "store " / "static",  # Ensure your static folder is defined
 ]
 '''
 STATICFILES_DIRS = [
